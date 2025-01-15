@@ -32,7 +32,7 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Make template changes take effect immediately.
   config.action_mailer.perform_caching = false
@@ -68,7 +68,7 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   config.action_mailer.smtp_settings = {
-    :user_name => 'GC7mGbb0RVisBkUU4CGjtQ', # 'michaelgdimmitt@gmail.com', # This is the string literal 'apikey', NOT the ID of your API key
+    :user_name => 'apikey', # 'michaelgdimmitt@gmail.com', # This is the string literal 'apikey', NOT the ID of your API key
     :password => ENV['SENDGRID_API_KEY'], # This is the secret sendgrid API key which was issued during API key creation
     :domain => 'michaeldimmitt@protonmail.com',
     :address => 'smtp.sendgrid.net',
